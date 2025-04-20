@@ -1,0 +1,929 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/lib/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/web.reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/renew.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/olib.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      <header id="header" class="header-renew">
+        <div class="inner">
+          <h1 class="header__logo">
+            <a href="/" class="header__logo--link"><span class="sr-only">Ponitto</span></a>
+          </h1>
+
+          <div class="nav-items-wrap">
+            <div class="nav-inner">
+              <nav class="gnb">
+                <ul class="gnb-items">
+                  <li><a href="javascript:void(0);">모바일</a></li>
+                  <li><a href="javascript:void(0);">인터넷+TV</a></li>
+                  <li><a href="javascript:void(0);">워치</a></li>
+                  <li><a href="javascript:void(0);">고객센터</a></li>
+                </ul>
+              </nav>
+              <nav class="hader-util">
+                <ul class="util-items">
+                  <li><a href="javascript:void(0);">구매후기</a></li>
+                  <li><a href="javascript:void(0);">이벤트</a></li>
+                  <li><a href="javascript:void(0);">주문조회</a></li>
+                </ul>
+                <div class="join-items">
+                  <a href="javascript:void(0);" class="btn-join">회원가입</a>
+                  <a href="javascript:void(0);" class="btn-login">로그인</a>
+                </div>
+              </nav>
+            </div>
+          </div>
+
+          <button type="button" class="btn__menu-control" onClick="javascript: clickMenuControl(event)">
+            <span class="sr-only">메뉴열기</span>
+            <i class="bar"></i>
+          </button>
+        </div>
+
+        <!-- <div class="header__content" style="">
+          <div class="inner">
+            <h1 class="header__logo">
+              <a href="/" class="header__logo--link">엠샵</a>
+            </h1>
+
+            <div class="header__content--menu">
+              <div class="header__menu--title">
+                <strong class="title">엠샵</strong>
+                <button type="button" class="btn__icon btn__close--menu"><span class="blind">메뉴닫기</span></button>
+              </div>
+              <nav class="heder__nav">
+                <ul class="header__nav--items">
+                  <li class="header__nav--item">
+                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=2';">한정특가</a>
+                  </li>
+                  <li class="header__nav--item">
+                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=3';">핫딜</a>
+                  </li>
+                  <li class="header__nav--item has-sub">
+                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=4';">제조사별</a>
+                    <ul class="header__nav--dep2">
+                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=4&mpjp=1';">삼성</a></li>
+                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=4&mpjp=2';">애플</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__nav--item has-sub">
+                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=5';">통신사별</a>
+                    <ul class="header__nav--dep2">
+                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=5&mptp=1';">SKT</a></li>
+                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=5&mptp=2';">KT</a></li>
+                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=5&mptp=3';">LGU+</a></li>
+                    </ul>
+                  </li>
+                  <li class="header__nav--item"><a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/event/event_list.php';">이벤트</a></li>
+                  <li class="header__nav--item has-sub">
+                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/customer/faq.php';">고객문의</a>
+                    <ul class="header__nav--dep2">
+                      <li class="heder__nav--dep2-item">
+                        <a href="javascript:void(0);" onclick="location.href='/customer/faq.php';">FAQ</a>
+                      </li>
+                      <li class="heder__nav--dep2-item">
+                        <a href="javascript:void(0);" onclick="location.href='/customer/qna_list.php';">1:1 문의</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="heder__util" style="">
+                <button type="button" class="btn__search" style=""><span>검색</span></button> <a href="javascript:void(0);" class="btn__order-check" style="" onclick="location.href='/model/order/order_search.php';">주문조회</a>
+              </div>
+              <div class="header__customer">
+                <dl class="header__customer-center">
+                  <dt>고객센터</dt>
+                  <dd class="customer-tel">
+                    <span class="block"
+                      >02-1588-1234
+                      <small>[유료]</small> </span
+                    >
+                  </dd>
+                  <dd class="customer-time"><span class="block">평일 : 오전 10:00 ~ 오후 5:00</span> <span class="block">점심 : 오후 12:00 ~ 오후 1:00</span></dd>
+                </dl>
+              </div>
+            </div>
+
+            <button type="button" class="btn__icon btn__search--mo-blk"><span class="blind">검색</span></button>
+            <button type="button" class="btn__icon btn__menu--open"><span class="bar"></span><span class="blind">메뉴열기</span></button>
+            <button type="button" class="btn__icon btn__back" onclick="if(document.referrer){history.back();}else{location.href='/';}" style="display: none"><span class="blind">뒤로가기</span></button>
+
+            <div class="header__dimmed"></div>
+          </div>
+        </div> -->
+
+        <!-- <div class="header__search">
+          <div class="header__search--inner">
+            <h2 class="header__search--title">통합검색</h2>
+            <div class="header__search--cont">
+              <div class="header__search--field">
+                <fieldset>
+                  <input type="text" class="" id="keyword" name="keyword" onkeydown="if(event.keyCode == 13){$('.header__search .btn__search--blk').click();}" placeholder="검색어를 입력하세요" />
+                  <button type="button" class="btn__icon btn__search--blk"><span class="blind">검색</span></button>
+                </fieldset>
+              </div>
+              <dl class="header__serach--best">
+                <dt>인기검색어</dt>
+                <dd><a href="javascript:void(0);">갤럭시 s23</a><a href="javascript:void(0);">갤럭시 s23 울트라</a><a href="javascript:void(0);">아이폰 15</a><a href="javascript:void(0);">s22 ultra</a></dd>
+              </dl>
+            </div>
+            <button type="button" class="btn__icon btn__closed"><span class="blind">검색닫기</span></button>
+          </div>
+        </div> -->
+      </header>
+      <!-- // Header -->
+
+      <!-- Container -->
+      <div id="container">
+        <!-- visual -->
+        <section class="main__section--visiual-rounded">
+          <div class="swiper-body">
+            <div class="swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <img src="assets/images/dummy/main_kv01.png" class="d_block d_none_ssm" />
+                  <img src="assets/images/dummy/main_kv01_m.jpg" class="d_none d_block_ssm" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="assets/images/dummy/main_kv02.png" class="d_block d_none_ssm" />
+                  <img src="assets/images/dummy/main_kv02_m.jpg" class="d_none d_block_ssm" />
+                </li>
+                <li class="swiper-slide">
+                  <img src="assets/images/dummy/main_kv03.png" class="d_block d_none_ssm" />
+                  <img src="assets/images/dummy/main_kv03_m.jpg" class="d_none d_block_ssm" />
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="swiper-button-prev"></button>
+            <button type="button" class="swiper-button-next"></button>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <!-- // visual -->
+
+        <!-- 지금 인기 많은 제품 -->
+        <section class="main__section main__section--renew">
+          <div class="inner has-px">
+            <h2 class="section__title">지금 인기 많은 제품</h2>
+
+            <div class="list__items-nowrap">
+              <ul class="list__items--rounded">
+                <li class="list__item">
+                  <a href="javascript:void(0);" class="list__item--link">
+                    <!-- flag -->
+                    <div class="flag-area">
+                      <div class="left">
+                        <span class="flag-rounded flag-rounded--b">번호이동</span>
+                        <span class="flag-rounded flag-rounded--b">기기변경</span>
+                      </div>
+                      <div class="right">
+                        <span class="flag-rounded flag-rounded--r">64%</span>
+                      </div>
+                    </div>
+                    <!-- // flag -->
+
+                    <!-- thumbnail -->
+                    <span class="thumb">
+                      <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                    </span>
+                    <!-- // thumbnail -->
+
+                    <!-- info -->
+                    <div class="list__item--info">
+                      <div class="tags">
+                        <span class="tag">최대할인</span>
+                        <span class="tag">빠른출고</span>
+                      </div>
+                      <div class="item__info--basic">
+                        <strong class="item-name">갤럭시 S25</strong>
+                        <del class="price-cost">출고가 <em>1,155,000</em></del>
+                      </div>
+                      <div class="item__info--price">
+                        <span class="discount-info">
+                          <span class="badge-discount">할인</span>
+                          <strong>875,000원</strong>
+                        </span>
+                        <div class="item-telecom">
+                          <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                          <span class="telecom-sk"></span>
+                          <span class="telecom-kt"></span>
+                        </div>
+                      </div>
+
+                      <dl class="item__info--final-price">
+                        <dt>현금가</dt>
+                        <dd><strong>280,000</strong>원</dd>
+                      </dl>
+                    </div>
+                    <!-- // info -->
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="javascript:void(0);" class="list__item--link">
+                    <!-- flag -->
+                    <div class="flag-area">
+                      <div class="left">
+                        <span class="flag-rounded flag-rounded--b">번호이동</span>
+                        <span class="flag-rounded flag-rounded--b">기기변경</span>
+                      </div>
+                      <div class="right">
+                        <span class="flag-rounded flag-rounded--r">64%</span>
+                      </div>
+                    </div>
+                    <!-- // flag -->
+
+                    <!-- thumbnail -->
+                    <span class="thumb">
+                      <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                    </span>
+                    <!-- // thumbnail -->
+
+                    <!-- info -->
+                    <div class="list__item--info">
+                      <div class="tags">
+                        <span class="tag">최대할인</span>
+                        <span class="tag">빠른출고</span>
+                      </div>
+                      <div class="item__info--basic">
+                        <strong class="item-name">갤럭시 S25</strong>
+                        <del class="price-cost">출고가 <em>1,155,000</em></del>
+                      </div>
+                      <div class="item__info--price">
+                        <span class="discount-info">
+                          <span class="badge-discount">할인</span>
+                          <strong>875,000원</strong>
+                        </span>
+                        <div class="item-telecom">
+                          <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                          <span class="telecom-sk"></span>
+                          <span class="telecom-kt"></span>
+                        </div>
+                      </div>
+
+                      <dl class="item__info--final-price">
+                        <dt>현금가</dt>
+                        <dd><strong>280,000</strong>원</dd>
+                      </dl>
+                    </div>
+                    <!-- // info -->
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="javascript:void(0);" class="list__item--link">
+                    <!-- flag -->
+                    <div class="flag-area">
+                      <div class="left">
+                        <span class="flag-rounded flag-rounded--b">번호이동</span>
+                        <span class="flag-rounded flag-rounded--b">기기변경</span>
+                      </div>
+                      <div class="right">
+                        <span class="flag-rounded flag-rounded--r">64%</span>
+                      </div>
+                    </div>
+                    <!-- // flag -->
+
+                    <!-- thumbnail -->
+                    <span class="thumb">
+                      <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                    </span>
+                    <!-- // thumbnail -->
+
+                    <!-- info -->
+                    <div class="list__item--info">
+                      <div class="tags">
+                        <span class="tag">최대할인</span>
+                        <span class="tag">빠른출고</span>
+                      </div>
+                      <div class="item__info--basic">
+                        <strong class="item-name">갤럭시 S25</strong>
+                        <del class="price-cost">출고가 <em>1,155,000</em></del>
+                      </div>
+                      <div class="item__info--price">
+                        <span class="discount-info">
+                          <span class="badge-discount">할인</span>
+                          <strong>875,000원</strong>
+                        </span>
+                        <div class="item-telecom">
+                          <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                          <span class="telecom-sk"></span>
+                          <span class="telecom-kt"></span>
+                        </div>
+                      </div>
+
+                      <dl class="item__info--final-price">
+                        <dt>현금가</dt>
+                        <dd><strong>280,000</strong>원</dd>
+                      </dl>
+                    </div>
+                    <!-- // info -->
+                  </a>
+                </li>
+
+                <li class="list__item">
+                  <a href="javascript:void(0);" class="list__item--link">
+                    <!-- flag -->
+                    <div class="flag-area">
+                      <div class="left">
+                        <span class="flag-rounded flag-rounded--b">번호이동</span>
+                        <span class="flag-rounded flag-rounded--b">기기변경</span>
+                      </div>
+                      <div class="right">
+                        <span class="flag-rounded flag-rounded--r">64%</span>
+                      </div>
+                    </div>
+                    <!-- // flag -->
+
+                    <!-- thumbnail -->
+                    <span class="thumb">
+                      <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                    </span>
+                    <!-- // thumbnail -->
+
+                    <!-- info -->
+                    <div class="list__item--info">
+                      <div class="tags">
+                        <span class="tag">최대할인</span>
+                        <span class="tag">빠른출고</span>
+                      </div>
+                      <div class="item__info--basic">
+                        <strong class="item-name">갤럭시 S25</strong>
+                        <del class="price-cost">출고가 <em>1,155,000</em></del>
+                      </div>
+                      <div class="item__info--price">
+                        <span class="discount-info">
+                          <span class="badge-discount">할인</span>
+                          <strong>875,000원</strong>
+                        </span>
+                        <div class="item-telecom">
+                          <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                          <span class="telecom-sk"></span>
+                          <span class="telecom-kt"></span>
+                        </div>
+                      </div>
+
+                      <dl class="item__info--final-price">
+                        <dt>현금가</dt>
+                        <dd><strong>280,000</strong>원</dd>
+                      </dl>
+                    </div>
+                    <!-- // info -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- // 지금 인기 많은 제품 -->
+
+        <!-- 이벤트 배너 -->
+        <section class="main__section main__section--event">
+          <div class="inner has-px">
+            <div class="scroll">
+              <ul class="list__main-event">
+                <li class="item">
+                  <a href="javascript:void(0);" class="item-link">
+                    <img src="assets/images/dummy/main_event01.png" />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="javascript:void(0);" class="item-link">
+                    <img src="assets/images/dummy/main_event02.png" />
+                  </a>
+                </li>
+                <li class="item">
+                  <a href="javascript:void(0);" class="item-link">
+                    <img src="assets/images/dummy/main_event03.png" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- // 이벤트 배너 -->
+
+        <!-- 오늘만 특가 제품 -->
+        <section class="main__section main__section--renew">
+          <div class="inner has-px">
+            <h2 class="section__title">오늘만 특가 제품</h2>
+
+            <ul class="list__items--rounded">
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+
+              <li class="list__item">
+                <a href="javascript:void(0);" class="list__item--link">
+                  <!-- flag -->
+                  <div class="flag-area">
+                    <div class="left">
+                      <span class="flag-rounded flag-rounded--b">번호이동</span>
+                      <span class="flag-rounded flag-rounded--b">기기변경</span>
+                    </div>
+                    <div class="right">
+                      <span class="flag-rounded flag-rounded--r">64%</span>
+                    </div>
+                  </div>
+                  <!-- // flag -->
+
+                  <!-- thumbnail -->
+                  <span class="thumb">
+                    <img src="//msfile-1.javasoft.kr/1/MODEL/2311/27/91f312ce385b096.jpg" />
+                  </span>
+                  <!-- // thumbnail -->
+
+                  <!-- info -->
+                  <div class="list__item--info">
+                    <div class="tags">
+                      <span class="tag">최대할인</span>
+                      <span class="tag">빠른출고</span>
+                    </div>
+                    <div class="item__info--basic">
+                      <strong class="item-name">갤럭시 S25</strong>
+                      <del class="price-cost">출고가 <em>1,155,000</em></del>
+                    </div>
+                    <div class="item__info--price">
+                      <span class="discount-info">
+                        <span class="badge-discount">할인</span>
+                        <strong>875,000원</strong>
+                      </span>
+                      <div class="item-telecom">
+                        <!-- .telecom-sk, telecom-kt, telecom-lg -->
+                        <span class="telecom-sk"></span>
+                        <span class="telecom-kt"></span>
+                      </div>
+                    </div>
+
+                    <dl class="item__info--final-price">
+                      <dt>현금가</dt>
+                      <dd><strong>280,000</strong>원</dd>
+                    </dl>
+                  </div>
+                  <!-- // info -->
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!-- // 오늘만 특가 제품 -->
+
+        <!-- 문의사항 -->
+        <section class="main__section main__section--inquiry">
+          <div class="inner has-px">
+            <div class="title-box">
+              <h2 class="title">많이 찾는 문의사항</h2>
+              <button type="button" class="btn-gray-line">전체보기</button>
+            </div>
+            <ul class="inquiry__items">
+              <li><a href="javascript:void(0);">유심은 어떻게 체크해야 할까요?</a></li>
+              <li><a href="javascript:void(0);">당일 수령 가능한가요?</a></li>
+              <li><a href="javascript:void(0);">통신사 이동(번호이동) 신청서 작성시 본인인증 방법은 어떻게 되나요?</a></li>
+              <li><a href="javascript:void(0);">배송 마감 시간은 언제인가요?</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- // Container -->
+
+      <footer id="footer" class="footer-renew">
+        <div class="inner has-px">
+          <p class="footer__logo"><span class="sr-only">ponitto</span></p>
+          <div class="footer__info">
+            <div class="footer__util">
+              <a href="javascript:void(0);">개인정보처리방침</a>
+              <a href="javascript:void(0);">이용약관</a>
+            </div>
+            <div class="footer__addr">
+              <p>
+                <span>상호명 : (주)아이원플러스</span>
+                <span>대표자 : 김유겸</span>
+                <span>주소 : 서울특별시 성동구 아차산로7나길 18, 대선 APEX CENTER 1102호 (성수동2가)</span>
+              </p>
+              <p>
+                <span>대표전화 : 1522-9625</span>
+                <span>Fax : 02-525-9625</span>
+                <span>Email : mail@ponitto.kr</span>
+              </p>
+              <p>
+                <span>사업자등록번호 : 378-87-00336</span>
+                <span>통신판매업신고 : 제2022-서울성동-00332호</span>
+                <span>유선통신 사전승낙서</span>
+              </p>
+              <p>
+                <span><em>고객센터 1522-0646</em> (평일 오전10시 ~ 오후6시 / 점심 : 오후12시 ~ 오후1시)</span>
+              </p>
+              <p class="copyright">COPYRIGHT © PONITTO. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+          <span class="certification">
+            <img src="assets/images/img_mark_certification.png" alt="" />
+          </span>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      var $swiper_slide = $(".swiper-slide");
+      var swiper_slide_len = $swiper_slide.length;
+      if (swiper_slide_len) {
+        var kvs_autoplay = null;
+        var slidesPerView = 1;
+        var loop = true;
+        if (swiper_slide_len == 1) {
+          kvs_autoplay = false;
+          slidesPerView = 0;
+          loop = false;
+        } else {
+          kvs_autoplay = { delay: 5000, disableOnInteraction: false };
+        }
+
+        var kvSwiper = new Swiper(".main__section--visiual-rounded .swiper-container", {
+          loop: loop,
+          slidesPerView: slidesPerView, //"auto",
+          autoplay: kvs_autoplay,
+          // allowTouchMove: false,
+          navigation: {
+            nextEl: ".main__section--visiual-rounded .swiper-button-next",
+            prevEl: ".main__section--visiual-rounded .swiper-button-prev",
+          },
+          pagination: {
+            el: ".main__section--visiual-rounded .swiper-pagination",
+            clickable: true,
+          },
+        });
+
+        if (swiper_slide_len == 1) {
+          $(".swiper-button-prev").css("display", "none");
+          $(".swiper-button-next").css("display", "none");
+          $(".swiper-pagination").css("display", "none");
+        }
+      }
+    </script>
+  </body>
+</html>
