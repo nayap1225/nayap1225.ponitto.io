@@ -2,39 +2,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no viewport-fit=cover" />
-    <title>포니또</title>
-    <link href="../static/css/ui.css" rel="stylesheet" />
+    <title>SHOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/lib/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/web.reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/renew.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/olib.css" />
   </head>
   <body>
     <div id="wrap">
-      <!-- Start: header -->
-      <header id="header">
-        <div class="header-inner">
-          <!-- header logo -->
+      <!-- Header -->
+      <header id="header" class="header-renew">
+        <div class="inner">
           <h1 class="header__logo">
-            <a href="./main.html">
-              <span class="sr-only">ponitto</span>
-            </a>
+            <a href="/" class="header__logo--link"><span class="sr-only">Ponitto</span></a>
           </h1>
-          <!-- // header logo -->
 
-          <button type="button" class="btn__menu-control" onClick="javascript: clickMenuControl(event)">
+          <div class="nav-items-wrap">
+            <div class="nav-inner">
+              <nav class="gnb">
+                <ul class="gnb-items">
+                  <li>
+                    <a href="javascript:void(0);">모바일</a>
+                    <ul class="depth2">
+                      <li>
+                        <a href="javascript:void(0);">갤럭시</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">아이폰</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">키즈폰</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">인터넷+TV</a>
+                    <ul class="depth2">
+                      <li>
+                        <a href="javascript:void(0);">갤럭시2</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">아이폰2</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">키즈폰2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:void(0);">워치</a></li>
+                  <li><a href="javascript:void(0);">고객센터</a></li>
+                </ul>
+              </nav>
+              <nav class="hader-util">
+                <ul class="util-items">
+                  <li><a href="javascript:void(0);">구매후기</a></li>
+                  <li><a href="javascript:void(0);">이벤트</a></li>
+                  <li><a href="javascript:void(0);">주문조회</a></li>
+                </ul>
+                <div class="join-items">
+                  <a href="javascript:void(0);" class="btn-join">회원가입</a>
+                  <a href="javascript:void(0);" class="btn-login">로그인</a>
+                </div>
+              </nav>
+            </div>
+            <button type="button" class="btn__menu-close" onClick="javascript: clickMenuControl(event)">
+              <span class="sr-only">메뉴닫기</span>
+            </button>
+          </div>
+
+          <div class="header__search-area">
+            <button type="button" class="btn__open-search" onClick="javascript: clickSearchHandler(event)">
+              <span class="sr-only">검색</span>
+            </button>
+
+            <!-- 검색영역 -->
+            <div class="header__search-layer">
+              <strong class="search-tit">검색어를 입력해주세요.</strong>
+              <div class="search-cont">
+                <fieldset>
+                  <input type="text" class="" id="keyword" name="keyword" />
+                  <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
+                </fieldset>
+              </div>
+              <button type="button" class="btn-close-search" onClick="javascript: clickSearchHandler(event)"><span class="sr-only">검색닫기</span></button>
+            </div>
+            <!-- // 검색영역 -->
+          </div>
+
+          <button type="button" class="btn__menu-open" onClick="javascript: clickMenuControl(event)">
             <span class="sr-only">메뉴열기</span>
-            <i class="bar"></i>
           </button>
-          <!-- header nav -->
-          <nav id="nav">
-            <ul class="gnb">
-              <li><a href="./about.html">소개</a></li>
-              <li><a href="javascript:void(0);">포니또샵</a></li>
-              <li><a href="javascript:void(0);">포니또카페</a></li>
-              <li><a href="javascript:void(0);">알뜰X세모퉁</a></li>
-            </ul>
-          </nav>
-          <!-- // header nav -->
+          <div class="dimmed" onClick="javascript: clickMenuControl(event)"></div>
         </div>
       </header>
-      <!-- // End: header -->
+      <!-- // Header -->
 
       <!-- Start: Container -->
       <main id="container">
@@ -128,9 +191,9 @@
       </main>
       <!-- // End: Container -->
 
-      <!-- Start: footer -->
-      <footer id="footer">
-        <div class="inner">
+      <!-- footer -->
+      <footer id="footer" class="footer-renew">
+        <div class="inner has-px">
           <p class="footer__logo"><span class="sr-only">ponitto</span></p>
           <div class="footer__info">
             <div class="footer__util">
@@ -153,13 +216,23 @@
                 <span>통신판매업신고 : 제2022-서울성동-00332호</span>
                 <span>유선통신 사전승낙서</span>
               </p>
+              <p>
+                <span><em>고객센터 1522-0646</em> (평일 오전10시 ~ 오후6시 / 점심 : 오후12시 ~ 오후1시)</span>
+              </p>
+              <p class="copyright">COPYRIGHT © PONITTO. ALL RIGHTS RESERVED.</p>
             </div>
-            <p class="copyright">COPYRIGHT © PONITTO. ALL RIGHTS RESERVED.</p>
           </div>
+          <span class="certification">
+            <img src="assets/images/img_mark_certification.png" alt="" />
+          </span>
         </div>
       </footer>
-      <!-- End: footer -->
-      <script src="../static/js/ui.js"></script>
+    </div>
+    <!-- // footer -->
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/renew.js"></script>
     </div>
   </body>
 </html>

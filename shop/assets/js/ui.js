@@ -195,6 +195,7 @@ function layerPopup() {
     $dimmed.attr("go_url", go_url);
     var popup_name = $(this).attr("popup_name");
     var _target = $("#" + popup_name);
+    console.log(_target);
     if (popup_name == "process_info") {
       //중고폰 보상금액 평가 기준 팝업시 에니메이션 없이 바로 보여줌
       _target.show();

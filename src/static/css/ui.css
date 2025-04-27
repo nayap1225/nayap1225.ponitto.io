@@ -109,7 +109,7 @@
 }
 
 #header {
-  position: fixed;
+  position: absolute;
   top: 4rem;
   left: 7rem;
   right: 7rem;
@@ -123,6 +123,39 @@
   background: var(--white);
   box-shadow: 1rem 1rem 4.5rem rgba(170, 170, 170, 0.3);
   z-index: 10;
+}
+#header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  animation: headerTrans 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10rem);
+}
+#header .header-inner {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#header.fixed .header-inner {
+  max-width: 192rem;
+  margin: 0 auto;
+}
+@keyframes headerTrans {
+  0% {
+    transform: translateY(-80rem);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 #header .header__logo a {
   display: block;
@@ -516,6 +549,30 @@ main contents
   font-size: 1.8rem;
   line-height: 1.48;
 }
+.section__main--visual .btn-go {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 6rem;
+  margin-top: 3rem;
+  padding: 0 3rem;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 0.6rem;
+  background: #00cad7;
+}
+/* 애니메이션 관련 */
+.section__main--visual .inner {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1.5s;
+}
+.section__main--visual.hasAnimation .inner {
+  opacity: 1;
+  visibility: visible;
+}
 
 @media (max-width: 1299px) {
   .section__main--visual {
@@ -539,6 +596,12 @@ main contents
     display: block;
     font-size: 1.38vw;
   }
+  .section__main--visual .btn-go {
+    height: 4.6275vw;
+    margin-top: 2.3vw;
+    padding: 0 2.3vw;
+    font-size: 1.56vw;
+  }
 }
 @media (max-width: 767px) {
   .section__main--visual {
@@ -561,6 +624,12 @@ main contents
   }
   .section__main--visual small {
     font-size: 2.778vw;
+  }
+  .section__main--visual .btn-go {
+    height: 7.2vw;
+    margin-top: 4vw;
+    padding: 0 4vw;
+    font-size: 3.2vw;
   }
 }
 
@@ -630,6 +699,49 @@ main contents
 }
 .section__main--benefit .card:nth-child(3) .text:before {
   background-image: url(../images/icon_check03.png);
+}
+
+/* 애니메이션 관련 */
+.section__main--benefit .title {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10rem);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+}
+.section__main--benefit .card {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5rem);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 0.5s;
+}
+.section__main--benefit .card:nth-child(1) {
+  transition-delay: 0.8s;
+}
+.section__main--benefit .card:nth-child(2) {
+  transition-delay: 1.2s;
+}
+.section__main--benefit .card:nth-child(3) {
+  transition-delay: 1.6s;
+}
+.section__main--benefit.hasAnimation .title {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section__main--benefit.hasAnimation .card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 @media (max-width: 1299px) {
@@ -859,6 +971,41 @@ main contents
   background: var(--primary);
 }
 
+/* 애니메이션 관련 */
+.section__main--recommand .title {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10rem);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+}
+.section__main--recommand .sticky-card {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5rem);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+  transition-delay: 0.8s;
+}
+.section__main--recommand.hasAnimation .title {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section__main--recommand.hasAnimation .sticky-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 @media (max-width: 1299px) {
   .section__main--recommand {
     padding: 18rem 0 12rem;
@@ -1086,6 +1233,33 @@ main contents
   background: #4fbbea;
 }
 
+/* 애니메이션 관련 */
+.section__main--service .con-box {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-10rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+}
+.section__main--service.hasAnimation .con-box {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+.section__main--service .img-box {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+.section__main--service.hasAnimation .img-box {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 1299px) {
   .section__main--service {
     padding: 10% 0 6%;
@@ -1220,6 +1394,19 @@ about contents
   aspect-ratio: 1/1.523;
   background: url(../images/img_ponitto.png) no-repeat center center / var(--full);
 }
+/* 애니메이션 관련 */
+.section__about--visual .msg-area {
+  opacity: 0;
+  visibility: hidden;
+  transition-property: opacity, visibility;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+}
+.section__about--visual.hasAnimation .msg-area {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 1299px) {
   .section__about--visual {
     padding: 18rem 0 5rem;
@@ -1328,6 +1515,49 @@ about contents
   color: var(--gray);
   font-size: 2rem;
   line-height: 1.5;
+}
+
+/* 애니메이션 관련 */
+.section__about--info .title {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-5rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+}
+.section__about--info.hasAnimation .title {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section__about--info .desc {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+.section__about--info.hasAnimation .desc {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section__about--info .cont {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+  transition-delay: 0.8s;
+}
+.section__about--info.hasAnimation .cont {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 @media (max-width: 1299px) {
@@ -1469,6 +1699,49 @@ about contents
   color: var(--secondary);
   font-weight: 700;
   line-height: 1.5;
+}
+
+/* 애니메이션 관련 */
+.section__about--dream .title {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+}
+.section__about--dream.hasAnimation .title {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section__about--dream .title:after {
+  animation: charMoving 1.4s ease infinite forwards;
+}
+@keyframes charMoving {
+  0% {
+    transform: translateY(0.7rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0.7rem);
+  }
+}
+.section__about--dream .cont-body {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+  transition-delay: 0.8s;
+}
+.section__about--dream.hasAnimation .cont-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 @media (max-width: 1299px) {
@@ -1645,6 +1918,48 @@ about contents
 .section__about--join .cont-body .prog .icon-04 {
   background-image: url(../images/icon_about_join04.png);
 }
+/* 애니메이션 관련 */
+.section__about--join .title {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-3rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+}
+.section__about--join.hasAnimation .title {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section__about--join .desc {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-2rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+  transition-delay: 0.5s;
+}
+.section__about--join.hasAnimation .desc {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.section__about--join .cont-body {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(5rem);
+  transition-property: opacity, visibility, transform;
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-duration: 1s;
+  transition-delay: 1s;
+}
+.section__about--join.hasAnimation .cont-body {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
 @media (max-width: 1299px) {
   .section__about--join .title {
@@ -1781,7 +2096,7 @@ about contents
 }
 
 /**********************************************
-corporation contents
+corporation contents - 기업전용 shop으로 이동
 **********************************************/
 
 .section__corp--visual {
@@ -1856,29 +2171,28 @@ corporation contents
     padding: 1.2rem 2rem 0.8rem;
     font-size: 2rem;
   }
-
-  @media (max-width: 767px) {
-    .section__corp--visual {
-      padding: 33.3vw 0 44.4vw;
-      background-image: url(../images/bg_corpaoration_m.jpg);
-      background-size: 100%;
-    }
-    .section__corp--visual .msg-area {
-      max-width: 40rem;
-      padding-left: 0;
-    }
-    .section__corp--visual .msg-area .text {
-      font-size: 4rem;
-    }
-    .section__corp--visual .msg-area .text small {
-      margin-top: 2.6rem;
-      font-size: 2.5rem;
-    }
-    .section__corp--visual .msg-area .btn-rounded {
-      margin: 2rem 0 0 0;
-      padding: 1rem 1.6rem 0.6rem;
-      font-size: 1.8rem;
-    }
+}
+@media (max-width: 767px) {
+  .section__corp--visual {
+    padding: 33.3vw 0 44.4vw;
+    background-image: url(../images/bg_corpaoration_m.jpg);
+    background-size: 100%;
+  }
+  .section__corp--visual .msg-area {
+    max-width: 40rem;
+    padding-left: 0;
+  }
+  .section__corp--visual .msg-area .text {
+    font-size: 4rem;
+  }
+  .section__corp--visual .msg-area .text small {
+    margin-top: 2.6rem;
+    font-size: 2.5rem;
+  }
+  .section__corp--visual .msg-area .btn-rounded {
+    margin: 2rem 0 0 0;
+    padding: 1rem 1.6rem 0.6rem;
+    font-size: 1.8rem;
   }
 }
 

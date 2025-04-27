@@ -3,9 +3,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="assets/js/lib/jquery.min.js"></script>
-    <script src="assets/js/lib/swiper.min.js"></script>
-    <script src="assets/js/ui.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/lib/swiper.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/web.reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/common.css" />
@@ -25,8 +22,34 @@
             <div class="nav-inner">
               <nav class="gnb">
                 <ul class="gnb-items">
-                  <li><a href="javascript:void(0);">모바일</a></li>
-                  <li><a href="javascript:void(0);">인터넷+TV</a></li>
+                  <li>
+                    <a href="javascript:void(0);">모바일</a>
+                    <ul class="depth2">
+                      <li>
+                        <a href="javascript:void(0);">갤럭시</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">아이폰</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">키즈폰</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">인터넷+TV</a>
+                    <ul class="depth2">
+                      <li>
+                        <a href="javascript:void(0);">갤럭시2</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">아이폰2</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">키즈폰2</a>
+                      </li>
+                    </ul>
+                  </li>
                   <li><a href="javascript:void(0);">워치</a></li>
                   <li><a href="javascript:void(0);">고객센터</a></li>
                 </ul>
@@ -43,105 +66,35 @@
                 </div>
               </nav>
             </div>
+            <button type="button" class="btn__menu-close" onClick="javascript: clickMenuControl(event)">
+              <span class="sr-only">메뉴닫기</span>
+            </button>
           </div>
 
-          <button type="button" class="btn__menu-control" onClick="javascript: clickMenuControl(event)">
-            <span class="sr-only">메뉴열기</span>
-            <i class="bar"></i>
-          </button>
-        </div>
+          <div class="header__search-area">
+            <button type="button" class="btn__open-search" onClick="javascript: clickSearchHandler(event)">
+              <span class="sr-only">검색</span>
+            </button>
 
-        <!-- <div class="header__content" style="">
-          <div class="inner">
-            <h1 class="header__logo">
-              <a href="/" class="header__logo--link">엠샵</a>
-            </h1>
-
-            <div class="header__content--menu">
-              <div class="header__menu--title">
-                <strong class="title">엠샵</strong>
-                <button type="button" class="btn__icon btn__close--menu"><span class="blind">메뉴닫기</span></button>
-              </div>
-              <nav class="heder__nav">
-                <ul class="header__nav--items">
-                  <li class="header__nav--item">
-                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=2';">한정특가</a>
-                  </li>
-                  <li class="header__nav--item">
-                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=3';">핫딜</a>
-                  </li>
-                  <li class="header__nav--item has-sub">
-                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=4';">제조사별</a>
-                    <ul class="header__nav--dep2">
-                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=4&mpjp=1';">삼성</a></li>
-                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=4&mpjp=2';">애플</a></li>
-                    </ul>
-                  </li>
-                  <li class="header__nav--item has-sub">
-                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/model/model_list.php?mp=5';">통신사별</a>
-                    <ul class="header__nav--dep2">
-                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=5&mptp=1';">SKT</a></li>
-                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=5&mptp=2';">KT</a></li>
-                      <li class="heder__nav--dep2-item"><a href="javascript:void(0);" onclick="location.href='/model/model_list.php?mp=5&mptp=3';">LGU+</a></li>
-                    </ul>
-                  </li>
-                  <li class="header__nav--item"><a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/event/event_list.php';">이벤트</a></li>
-                  <li class="header__nav--item has-sub">
-                    <a href="javascript:void(0);" class="heder__nav--dep1-link" onclick="location.href='/customer/faq.php';">고객문의</a>
-                    <ul class="header__nav--dep2">
-                      <li class="heder__nav--dep2-item">
-                        <a href="javascript:void(0);" onclick="location.href='/customer/faq.php';">FAQ</a>
-                      </li>
-                      <li class="heder__nav--dep2-item">
-                        <a href="javascript:void(0);" onclick="location.href='/customer/qna_list.php';">1:1 문의</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </nav>
-              <div class="heder__util" style="">
-                <button type="button" class="btn__search" style=""><span>검색</span></button> <a href="javascript:void(0);" class="btn__order-check" style="" onclick="location.href='/model/order/order_search.php';">주문조회</a>
-              </div>
-              <div class="header__customer">
-                <dl class="header__customer-center">
-                  <dt>고객센터</dt>
-                  <dd class="customer-tel">
-                    <span class="block"
-                      >02-1588-1234
-                      <small>[유료]</small> </span
-                    >
-                  </dd>
-                  <dd class="customer-time"><span class="block">평일 : 오전 10:00 ~ 오후 5:00</span> <span class="block">점심 : 오후 12:00 ~ 오후 1:00</span></dd>
-                </dl>
-              </div>
-            </div>
-
-            <button type="button" class="btn__icon btn__search--mo-blk"><span class="blind">검색</span></button>
-            <button type="button" class="btn__icon btn__menu--open"><span class="bar"></span><span class="blind">메뉴열기</span></button>
-            <button type="button" class="btn__icon btn__back" onclick="if(document.referrer){history.back();}else{location.href='/';}" style="display: none"><span class="blind">뒤로가기</span></button>
-
-            <div class="header__dimmed"></div>
-          </div>
-        </div> -->
-
-        <!-- <div class="header__search">
-          <div class="header__search--inner">
-            <h2 class="header__search--title">통합검색</h2>
-            <div class="header__search--cont">
-              <div class="header__search--field">
+            <!-- 검색영역 -->
+            <div class="header__search-layer">
+              <strong class="search-tit">검색어를 입력해주세요.</strong>
+              <div class="search-cont">
                 <fieldset>
-                  <input type="text" class="" id="keyword" name="keyword" onkeydown="if(event.keyCode == 13){$('.header__search .btn__search--blk').click();}" placeholder="검색어를 입력하세요" />
-                  <button type="button" class="btn__icon btn__search--blk"><span class="blind">검색</span></button>
+                  <input type="text" class="" id="keyword" name="keyword" />
+                  <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
                 </fieldset>
               </div>
-              <dl class="header__serach--best">
-                <dt>인기검색어</dt>
-                <dd><a href="javascript:void(0);">갤럭시 s23</a><a href="javascript:void(0);">갤럭시 s23 울트라</a><a href="javascript:void(0);">아이폰 15</a><a href="javascript:void(0);">s22 ultra</a></dd>
-              </dl>
+              <button type="button" class="btn-close-search" onClick="javascript: clickSearchHandler(event)"><span class="sr-only">검색닫기</span></button>
             </div>
-            <button type="button" class="btn__icon btn__closed"><span class="blind">검색닫기</span></button>
+            <!-- // 검색영역 -->
           </div>
-        </div> -->
+
+          <button type="button" class="btn__menu-open" onClick="javascript: clickMenuControl(event)">
+            <span class="sr-only">메뉴열기</span>
+          </button>
+          <div class="dimmed" onClick="javascript: clickMenuControl(event)"></div>
+        </div>
       </header>
       <!-- // Header -->
 
@@ -888,6 +841,10 @@
       </footer>
     </div>
 
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/renew.js"></script>
     <script>
       var $swiper_slide = $(".swiper-slide");
       var swiper_slide_len = $swiper_slide.length;

@@ -1,0 +1,788 @@
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/css/lib/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/web.reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/renew.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/olib.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <!-- Header -->
+      <header id="header" class="header-renew">
+        <div class="inner">
+          <h1 class="header__logo">
+            <a href="/" class="header__logo--link"><span class="sr-only">Ponitto</span></a>
+          </h1>
+
+          <div class="nav-items-wrap">
+            <div class="nav-inner">
+              <nav class="gnb">
+                <ul class="gnb-items">
+                  <li>
+                    <a href="javascript:void(0);">모바일</a>
+                    <ul class="depth2">
+                      <li>
+                        <a href="javascript:void(0);">갤럭시</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">아이폰</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">키즈폰</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);">인터넷+TV</a>
+                    <ul class="depth2">
+                      <li>
+                        <a href="javascript:void(0);">갤럭시2</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">아이폰2</a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0);">키즈폰2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li><a href="javascript:void(0);">워치</a></li>
+                  <li><a href="javascript:void(0);">고객센터</a></li>
+                </ul>
+              </nav>
+              <nav class="hader-util">
+                <ul class="util-items">
+                  <li><a href="javascript:void(0);">구매후기</a></li>
+                  <li><a href="javascript:void(0);">이벤트</a></li>
+                  <li><a href="javascript:void(0);">주문조회</a></li>
+                </ul>
+                <div class="join-items">
+                  <a href="javascript:void(0);" class="btn-join">회원가입</a>
+                  <a href="javascript:void(0);" class="btn-login">로그인</a>
+                </div>
+              </nav>
+            </div>
+            <button type="button" class="btn__menu-close" onClick="javascript: clickMenuControl(event)">
+              <span class="sr-only">메뉴닫기</span>
+            </button>
+          </div>
+
+          <div class="header__search-area">
+            <button type="button" class="btn__open-search" onClick="javascript: clickSearchHandler(event)">
+              <span class="sr-only">검색</span>
+            </button>
+
+            <!-- 검색영역 -->
+            <div class="header__search-layer">
+              <strong class="search-tit">검색어를 입력해주세요.</strong>
+              <div class="search-cont">
+                <fieldset>
+                  <input type="text" class="" id="keyword" name="keyword" />
+                  <button type="button" class="btn-search"><span class="sr-only">검색</span></button>
+                </fieldset>
+              </div>
+              <button type="button" class="btn-close-search" onClick="javascript: clickSearchHandler(event)"><span class="sr-only">검색닫기</span></button>
+            </div>
+            <!-- // 검색영역 -->
+          </div>
+
+          <button type="button" class="btn__menu-open" onClick="javascript: clickMenuControl(event)">
+            <span class="sr-only">메뉴열기</span>
+          </button>
+          <div class="dimmed" onClick="javascript: clickMenuControl(event)"></div>
+        </div>
+      </header>
+      <!-- // Header -->
+
+      <!-- Container -->
+      <div id="container">
+        <section class="goodsDetail__wrap">
+          <!-- breadcrumb -->
+          <p class="breadcrumb inner has-px">
+            <a href="javascript:void(0);" class="path">HOME</a>
+            <a href="javascript:void(0);" class="path">모바일</a>
+            <em>갤럭시 S25</em>
+          </p>
+          <!-- // breadcrumb -->
+
+          <!-- heading -->
+          <div class="detail__heading inner has-px">
+            <div class="heading-box">
+              <div class="title-area">
+                <h2 class="detail-title">갤럭시 S25</h2>
+                <div class="flag-area">
+                  <span class="flag-rounded flag-rounded--d min-auto">5G</span>
+                  <span class="flag-rounded flag-rounded--y min-auto">HOT</span>
+                  <span class="flag-rounded flag-rounded--p min-auto">NEW</span>
+                </div>
+                <p class="desc">빠른출고, 512G 추가 할인 별도 문의!</p>
+              </div>
+              <div class="btn-area">
+                <button type="button" class="btn-like"><span class="sr-only">좋아요</span></button>
+                <button type="button" class="btn-share"><span class="sr-only">공유하기</span></button>
+              </div>
+            </div>
+          </div>
+          <!-- // heading -->
+
+          <!-- contents -->
+          <section class="detail-body">
+            <div class="inner has-px">
+              <div class="body-top">
+                <div class="goods__thumbnails">
+                  <div class="img-big">
+                    <img src="assets/images/dummy/img_phone1.jpg" alt="" />
+                  </div>
+                  <div class="img-swiper">
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide">
+                        <span data-color="#d4d4d7" class="thumb"><img src="assets/images/dummy/img_phone1.jpg" alt="" /></span>
+                      </li>
+                      <li class="swiper-slide">
+                        <span data-color="#a6b8f7" class="thumb"><img src="assets/images/dummy/img_phone2.jpg" alt="" /></span>
+                      </li>
+                      <li class="swiper-slide">
+                        <span data-color="#def8a2" class="thumb"><img src="assets/images/dummy/img_phone3.jpg" alt="" /></span>
+                      </li>
+                      <li class="swiper-slide">
+                        <span data-color="#ffc4ce" class="thumb"><img src="assets/images/dummy/img_phone4.jpg" alt="" /></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="goods__setting-options">
+                  <dl class="item-option option-colors">
+                    <dt class="opt-title">색상</dt>
+                    <dd class="opt-cont">
+                      <div class="color-options">
+                        <label style="background: #d4d4d7; border-color: #d4d4d7">
+                          <input type="radio" id="" name="colorChip" data-color="#d4d4d7" data-img="img_phone1.jpg" />
+                          <span class="color-name">실버쉐도우</span>
+                        </label>
+                        <label style="background: #a6b8f7; border-color: #a6b8f7">
+                          <input type="radio" id="" name="colorChip" data-color="#a6b8f7" data-img="img_phone2.jpg" />
+                          <span class="color-name">블루</span>
+                        </label>
+                        <label style="background: #def8a2; border-color: #def8a2">
+                          <input type="radio" id="" name="colorChip" data-color="#def8a2" data-img="img_phone3.jpg" />
+                          <span class="color-name">그린</span>
+                        </label>
+                        <label style="background: #ffc4ce; border-color: #ffc4ce">
+                          <input type="radio" id="" name="colorChip" data-color="#ffc4ce" data-img="img_phone4.jpg" />
+                          <span class="color-name">핑크</span>
+                        </label>
+                      </div>
+                      <p class="txt-color-name">실버쉐도우</p>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-capacity">
+                    <dt class="opt-title">용량</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text">
+                        <input type="radio" id="model_size_256" name="model_size" checked />
+                        <label for="model_size_256">256GB</label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="model_size_512" name="model_size" />
+                        <label for="model_size_512">512GB</label>
+                      </span>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-telecom">
+                    <dt class="opt-title">사용중인 통신사</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text">
+                        <input type="radio" id="old_telecom_1" name="old_telecom" value="1" checked />
+                        <label for="old_telecom_1"><span class="sr-only">SKT</span><i class="ico-skt"></i></label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="old_telecom_2" name="old_telecom" value="2" />
+                        <label for="old_telecom_2"><span class="sr-only">KT</span><i class="ico-kt"></i></label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="old_telecom_3" name="old_telecom" value="3" />
+                        <label for="old_telecom_3"><span class="sr-only">U+</span><i class="ico-lg"></i></label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="old_telecom_4" name="old_telecom" value="4" />
+                        <label for="old_telecom_4">알뜰폰</label>
+                      </span>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-telecom">
+                    <dt class="opt-title">사용하실 통신사</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text">
+                        <input type="radio" id="new_telecom_1" name="new_telecom" value="1" checked />
+                        <label for="new_telecom_1"><span class="sr-only">SKT</span><i class="ico-skt"></i></label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="new_telecom_2" name="new_telecom" value="2" />
+                        <label for="new_telecom_2"><span class="sr-only">KT</span><i class="ico-kt"></i></label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="new_telecom_3" name="new_telecom" value="3" />
+                        <label for="new_telecom_3"><span class="sr-only">U+</span><i class="ico-lg"></i></label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="new_telecom_4" name="new_telecom" value="4" />
+                        <label for="new_telecom_4">알뜰폰</label>
+                      </span>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-price-rate">
+                    <dt class="opt-title">요금제 선택</dt>
+                    <dd class="opt-cont">
+                      <div class="price-rate-info">
+                        <div class="title-area">
+                          <p id="lbl_yogeumje_active_txt">5GX 레귤러플러스<small>(월79,000원)</small></p>
+                          <a href="javascript:void(0);" class="btn__popup-open btn_change" popup_name="yogeumje_popup">변경</a>
+                        </div>
+                        <div class="info-area">
+                          <p id="lbl_paysys_active_data"><b>데이터</b> 250GB</p>
+                          <p id="lbl_paysys_active_voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                          <p id="lbl_paysys_active_sms"><b>문자</b> 기본제공</p>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-tarde">
+                    <dt class="opt-title">중고폰 보상</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text">
+                        <input type="radio" id="used_phone_trade_y" name="used_phone_trade" value="y" />
+                        <label for="used_phone_trade_y">보상</label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="used_phone_trade_n" name="used_phone_trade" value="n" checked="" />
+                        <label for="used_phone_trade_n">선택안함</label>
+                      </span>
+                      <button id="btn_process_info" type="button" class="btn__popup-open" popup_name="process_info">중고보상 평가안내</button>
+                      <strong class="caution">※ 중고폰 보상금액은 선택하신 단말기와 상태에 따라 보상 금액이 달라 질 수 있습니다.</strong>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-discount">
+                    <dt class="opt-title">할인방법</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text">
+                        <input type="radio" id="halin_yuhyeong_1" name="halin_yuhyeong" value="1" checked />
+                        <label for="halin_yuhyeong_1">공시지원할인<br />총 488,750원</label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="halin_yuhyeong_2" name="halin_yuhyeong" value="2" />
+                        <label for="halin_yuhyeong_2">선택약정할인<br />총 474,000원</label>
+                      </span>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-buy">
+                    <dt class="opt-title">구매방법</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text">
+                        <input type="radio" id="halbu_gigan_0" name="halbu_gigan" value="0" />
+                        <label for="halbu_gigan_0">일시불</label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="halbu_gigan_24" name="halbu_gigan" value="24" checked="" />
+                        <label for="halbu_gigan_24">24개월</label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="halbu_gigan_30" name="halbu_gigan" value="30" />
+                        <label for="halbu_gigan_30">30개월</label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="halbu_gigan_36" name="halbu_gigan" value="36" />
+                        <label for="halbu_gigan_36">36개월</label>
+                      </span>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-usim">
+                    <dt class="opt-title">유심선택</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text">
+                        <input type="radio" id="usim1" name="usim" value="1" checked="" />
+                        <label for="usim1">신규 유심</label>
+                      </span>
+                      <span class="form-radio-text">
+                        <input type="radio" id="usim2" name="usim" value="2" />
+                        <label for="usim2">기존 유심</label>
+                      </span>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-add-discount">
+                    <dt class="opt-title">추가할인</dt>
+                    <dd class="opt-cont">
+                      <span class="opt-price-box">530,000 원</span>
+                    </dd>
+                  </dl>
+
+                  <dl class="item-option option-card-benefit">
+                    <dt class="opt-title">제휴카드</dt>
+                    <dd class="opt-cont">
+                      <span class="form-radio-text benefit-card">
+                        <input type="radio" id="benefit_card" name="benefit_card" value="Y" class="btn__popup-open" popup_name="jehyu_card_popup" data-price="0" />
+                        <label for="benefit_card">
+                          <span id="benefit_card_sel_dis">제휴카드 선택 시 할인혜택을 드립니다.</span>
+                          <!-- <div id="benefit_card_reset" class="nonSelected">선택안함</div> -->
+                        </label>
+                      </span>
+                      <strong class="caution">※ 인터넷 또는 제휴카드 선택 시 더 많은 할인을 받으실 수 있습니다.</strong>
+                    </dd>
+                  </dl>
+                </div>
+
+                <div class="goods__total-price">
+                  <!-- 자체할인 금액 -->
+                  <div class="box-info-sale">
+                    <span class="box">
+                      <small>포니또 자체할인</small>
+                      <em class="price"><strong>450,000</strong> 원</em>
+                    </span>
+                  </div>
+                  <!-- // 자체할인 금액 -->
+
+                  <!-- 요금정보 -->
+                  <div class="fee-calc-info">
+                    <div>
+                      <dl class="month-fee">
+                        <div class="final">
+                          <dt><i class="ico">A</i>월 통신요금</dt>
+                          <dd>105,000 원</dd>
+                        </div>
+                        <div>
+                          <dt>5GX 프리미엄</dt>
+                          <dd>105,000 원</dd>
+                        </div>
+                      </dl>
+                      <dl class="month-instalment">
+                        <div class="final">
+                          <dt><i class="ico">B</i>월 할부금(24개월)</dt>
+                          <dd>9,076 원</dd>
+                        </div>
+                        <div>
+                          <dt>출고가</dt>
+                          <dd>1,155,000 원</dd>
+                        </div>
+                        <div>
+                          <dt>공시지원금</dt>
+                          <dd>-500,000 원</dd>
+                        </div>
+                        <div>
+                          <dt>포니또 자체할인</dt>
+                          <dd>-450,000 원</dd>
+                        </div>
+                        <div class="divider">
+                          <dt>할부원금</dt>
+                          <dd>205,000 원</dd>
+                        </div>
+                        <div>
+                          <dt>할부이자</dt>
+                          <dd>534 원</dd>
+                        </div>
+                      </dl>
+
+                      <dl class="total-info">
+                        <div>
+                          <dt><i class="ico">A</i> + <i class="ico">B</i> 월납부금</dt>
+                          <dd><strong>114,076</strong> 원</dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </div>
+                  <!-- // 요금정보 -->
+
+                  <!-- 버튼영역 -->
+                  <div class="btn__area column">
+                    <button type="button" class="btn-core-smd btn-core-primary rounded">주문 신청하기</button>
+                    <p class="desc">※ 지금 상담신청 하시면 총 <strong>50,000원</strong> 할인 혜택 제공됩니다.</p>
+                    <div class="btn__area">
+                      <button type="button" class="btn-core-smd btn-core-gray rounded">카톡문의</button>
+                      <button type="button" class="btn-core-smd btn-core-blk rounded">1:1문의</button>
+                    </div>
+                  </div>
+                  <!-- // 버튼영역 -->
+
+                  <!-- 배너영역 -->
+                  <div class="banner">
+                    <img src="/assets/images/dummy/img_banner.jpg" alt="" />
+                  </div>
+                  <!-- // 배너영역 -->
+                </div>
+              </div>
+
+              <div class="detail-info">
+                <!-- detail image -->
+                <div class="img-area">
+                  <img src="assets/images/dummy/img_detail.jpg" alt="" />
+                </div>
+                <!-- detail image -->
+
+                <div class="inquiry-area">
+                  <p class="desc">※ 지금 상담신청 하시면 총 <em class="red">50,000원</em> 할인 혜택 제공됩니다.</p>
+                  <div class="btn__area">
+                    <button type="button" class="btn-core-lg btn-core-primary rounded">주문 신청하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- // contents -->
+        </section>
+
+        <!-- asis 팝업(변경없음) -->
+        <div class="trade">
+          <!-- 레이어팝업 -->
+          <div class="popup__layer">
+            <div class="popup__layer--dimmed"></div>
+
+            <!-- 요금제 선택 팝업 -->
+            <div class="popup__layer--panel panel--sm tariff-plan" id="yogeumje_popup">
+              <div class="popup__layer--body">
+                <h2 id="lbl_paysys_title" class="popup__layer--title"><i class="icon icon-sk"></i>SKT 요금제 선택</h2>
+                <div class="popup__layer--cont">
+                  <!-- 요금제 선택 -->
+                  <div class="tariff-plan__itmes scroll-custom select-list__items">
+                    <dl class="plan item yogeumje-prim-10">
+                      <dt class="title">베이직 <small>(월 49,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 8GB</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                    <dl class="plan item yogeumje-prim-11">
+                      <dt class="title">슬림 <small>(월 55,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 11GB</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                    <dl class="plan item yogeumje-prim-12">
+                      <dt class="title">베이직플러스 <small>(월 59,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 24GB</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                    <dl class="plan item yogeumje-prim-13">
+                      <dt class="title">5GX 레귤러 <small>(월 69,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 110GB</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                    <dl class="plan item yogeumje-prim-14">
+                      <dt class="title sel-yogeumje">5GX 레귤러플러스 <small>(월 79,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 250GB</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                    <dl class="plan item yogeumje-prim-15">
+                      <dt class="title">5GX 프라임 <small>(월 89,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 무제한</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                    <dl class="plan item yogeumje-prim-16">
+                      <dt class="title">5GX 프라임플러스 <small>(월 99,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 무제한</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                    <dl class="plan item yogeumje-prim-17">
+                      <dt class="title">5GX 플래티넘 <small>(월 125,000원)</small></dt>
+                      <dd class="content">
+                        <p class="data"><b>데이터</b> 무제한</p>
+                        <p class="voice"><b>음성</b> 집전화/이동전화 무제한+부가통화 300분</p>
+                        <p class="sms"><b>문자</b> 기본제공</p>
+                      </dd>
+                    </dl>
+                  </div>
+                  <!-- // 요금제 선택 -->
+                </div>
+                <button id="btn_paysys_pop_close" type="button" class="btn__popup-close btn__popup-close--round"><span class="blind">레이어 닫기</span></button>
+              </div>
+            </div>
+            <!-- // 요금제 선택 팝업 -->
+
+            <!-- 카드혜택 레이어팝업 -->
+            <div class="popup__layer--panel panel--sm benefit-card" id="jehyu_card_popup">
+              <div class="popup__layer--body">
+                <h2 id="lbl_card_title" class="popup__layer--title"><i class="icon icon-sk"></i>SKT 제휴카드 선택</h2>
+
+                <div class="popup__layer--cont">
+                  <div class="layer-cont__title-box">
+                    <p class="desc">제휴할 카드의 월 예상 사용 금액(실적)을 선택하세요.</p>
+                  </div>
+
+                  <!-- 카드 선택 -->
+                  <div class="benefit-card__itmes scroll-custom select-list__items">
+                    <div class="item">
+                      <div class="info">
+                        <span class="thumb"><img src="//msfile-1.javasoft.kr/1/CARD/2311/27/900d0a1bebcca41.png" /></span>
+                        <strong class="name">T-economy KB국민카드</strong>
+                      </div>
+
+                      <div class="benefit-detail">
+                        <ul class="detail-list">
+                          <li class="box">
+                            <span class="cond">전월 실적 300,000원 이상</span>
+                            <strong class="benefit">매월 12,000원 X 24개월 = 총 288,000원</strong>
+                          </li>
+                          <li class="box">
+                            <span class="cond">전월 실적 700,000원 이상</span>
+                            <strong class="benefit">매월 17,000원 X 24개월 = 총 408,000원</strong>
+                          </li>
+                        </ul>
+                        <div class="cs">
+                          <p class="cs-center">고객센터 16448642</p>
+                          <a href="https://m.kbcard.com/CRD/DVIEW/MCAMCXHIACRC0002?mainCC=b&amp;allianceCode=04288" class="cs-detail" target="_blank">자세히보기</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item" card_title="롯데카드 TELLO SE" telecom_prim="1" style="">
+                      <div class="info">
+                        <span class="thumb"><img src="//msfile-1.javasoft.kr/1/CARD/2311/27/b9f592c3b7bba26.png" /></span>
+                        <strong class="name">롯데카드 TELLO SE</strong>
+                      </div>
+
+                      <div class="benefit-detail">
+                        <ul class="detail-list">
+                          <li class="box">
+                            <span class="cond">전월 실적 400,000원 이상</span>
+                            <strong class="benefit">매월 8,000원 X 24개월 = 총 192,000원</strong>
+                          </li>
+                          <li class="box">
+                            <span class="cond">전월 실적 800,000원 이상</span>
+                            <strong class="benefit">매월 13,000원 X 24개월 = 총 312,000원</strong>
+                          </li>
+                        </ul>
+                        <div class="cs">
+                          <p class="cs-center">고객센터 18118100</p>
+                          <a href="https://m.lottecard.co.kr/spa/card/booth?bId=50810&amp;vtCdKndC=P13248-A13248&amp;timestamp=20221209114018" class="cs-detail" target="_blank">자세히보기</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- // 카드 선택 -->
+
+                  <div class="noti">
+                    <p>제휴 카드 할인은 카드사 정책에 따라 변경될 수 있습니다. 할인 및 추가 혜택에 대한 안내는 카드사에 필히 문의하시기 바랍니다.</p>
+                    <p>제품 구매 후 해당 카드사를 통하여 카드 발급 받으시고 고객센터를 통하여 개통일 기준 14일 이내 등록하셔야 할인 혜택을 받으실 수 있습니다.</p>
+                  </div>
+                </div>
+                <button id="btn_benefit_card_close" type="button" class="btn__popup-close btn__popup-close--round"><span class="blind">레이어 닫기</span></button>
+              </div>
+            </div>
+            <!-- // 카드혜택 레이어팝업 -->
+
+            <!-- 중고폰 보상 평가기준 -->
+            <div class="popup__layer--panel layer--process" id="process_info">
+              <div class="popup__layer--body">
+                <h2 class="popup__layer--title">중고폰 보상금액 평가 기준</h2>
+
+                <div class="popup__layer--cont">
+                  <div class="compensate-info">
+                    <strong class="table-caption">외관 및 LCD 상태 등 파손 여부에 따른 등급</strong>
+                    <table class="table-row">
+                      <colgroup>
+                        <col style="width: 28%" />
+                        <col />
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>상태</th>
+                          <th>평가 기준</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th>고장</th>
+                          <td>
+                            <ul>
+                              <li>전원/충전 불량</li>
+                              <li>화면불량 (LCD 파손, 흑점, 터치불량)</li>
+                            </ul>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="td_ex">
+                            <div class="example">
+                              <em>예시)</em>
+                              <div class="img-box">
+                                <span class="img"><img src="../assets/images/ex_trouble_01.jpg" /></span>
+                                <span class="img"><img src="../assets/images/ex_trouble_02.jpg" /></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>찍힘, <br />스크래치</th>
+                          <td>
+                            <p>테두리 스크래치 3㎜ 2개 이상</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="td_ex">
+                            <div class="example">
+                              <em>예시)</em>
+                              <div class="img-box">
+                                <span class="img"><img src="../assets/images/ex_scratch_01.jpg" /></span>
+                                <span class="img"><img src="../assets/images/ex_scratch_02.jpg" /></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>잔상(번인)</th>
+                          <td>
+                            <p>이미지가 사라지지 않고 화면에 남아 있음</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="td_ex">
+                            <div class="example">
+                              <em>예시)</em>
+                              <div class="img-box">
+                                <span class="img"><img src="../assets/images/ex_afterimage_01.jpg" /></span>
+                                <span class="img"><img src="../assets/images/ex_afterimage_02.jpg" /></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <th>강화유리 파손</th>
+                          <td>
+                            <p>강화유리 찍힘/스크래치 (스크래치 3㎜ 2개 이상)</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2" class="td_ex">
+                            <div class="example">
+                              <em>예시)</em>
+                              <div class="img-box">
+                                <span class="img"><img src="../assets/images/ex_breakGlass_01.jpg" /></span>
+                                <span class="img"><img src="../assets/images/ex_breakGlass_02.jpg" /></span>
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <button id="btn_process_info_close" type="button" class="btn__popup-close btn__popup-close--round"><span class="blind">레이어 닫기</span></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- // 레이어팝업 -->
+        </div>
+        <!-- // asis 팝업(변경없음) -->
+      </div>
+      <!-- // Container -->
+
+      <!-- footer -->
+      <footer id="footer" class="footer-renew">
+        <div class="inner has-px">
+          <p class="footer__logo"><span class="sr-only">ponitto</span></p>
+          <div class="footer__info">
+            <div class="footer__util">
+              <a href="javascript:void(0);">개인정보처리방침</a>
+              <a href="javascript:void(0);">이용약관</a>
+            </div>
+            <div class="footer__addr">
+              <p>
+                <span>상호명 : (주)아이원플러스</span>
+                <span>대표자 : 김유겸</span>
+                <span>주소 : 서울특별시 성동구 아차산로7나길 18, 대선 APEX CENTER 1102호 (성수동2가)</span>
+              </p>
+              <p>
+                <span>대표전화 : 1522-9625</span>
+                <span>Fax : 02-525-9625</span>
+                <span>Email : mail@ponitto.kr</span>
+              </p>
+              <p>
+                <span>사업자등록번호 : 378-87-00336</span>
+                <span>통신판매업신고 : 제2022-서울성동-00332호</span>
+                <span>유선통신 사전승낙서</span>
+              </p>
+              <p>
+                <span><em>고객센터 1522-0646</em> (평일 오전10시 ~ 오후6시 / 점심 : 오후12시 ~ 오후1시)</span>
+              </p>
+              <p class="copyright">COPYRIGHT © PONITTO. ALL RIGHTS RESERVED.</p>
+            </div>
+          </div>
+          <span class="certification">
+            <img src="assets/images/img_mark_certification.png" alt="" />
+          </span>
+        </div>
+      </footer>
+    </div>
+    <!-- // footer -->
+
+    <script src="assets/js/lib/jquery.min.js"></script>
+    <script src="assets/js/lib/swiper.min.js"></script>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/renew.js"></script>
+    <script>
+      const imgSwiper = new Swiper(".img-swiper", {
+        autoplay: false,
+        loop: true,
+        slidesPerView: "auto",
+        // spaceBetween: 10,
+      });
+
+      const isSelectedImg = document.querySelector(".img-big img");
+      const btnImg = document.querySelectorAll(".img-swiper .thumb");
+      const colorChip = document.querySelectorAll("input[name=colorChip]");
+      if (btnImg.length) {
+        btnImg.forEach((item) => {
+          item.addEventListener("click", function (e) {
+            const target = e.currentTarget;
+            const dataColor = target.getAttribute("data-color");
+            const img = target.querySelector("img");
+            const src = img.getAttribute("src");
+            isSelectedImg.setAttribute("src", src);
+            const radioChecked = [...colorChip].find((x) => {
+              return x.dataset.color === dataColor;
+            });
+            radioChecked.checked = true;
+          });
+        });
+      }
+      if (colorChip.length) {
+        colorChip.forEach((radio) => {
+          radio.addEventListener("change", function () {
+            const dataImg = this.getAttribute("data-img");
+            const imgSrc = isSelectedImg.getAttribute("src").split("/");
+            imgSrc[imgSrc.length - 1] = dataImg;
+            const newSrc = imgSrc.join("/");
+            isSelectedImg.setAttribute("src", newSrc);
+          });
+        });
+      }
+    </script>
+  </body>
+</html>
